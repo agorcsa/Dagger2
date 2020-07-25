@@ -4,9 +4,13 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
+import javax.inject.Inject;
+
 public class MainActivity extends AppCompatActivity {
 
-    private Car car;
+    // Dagger will inject the car object
+    @Inject Car car;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,8 +21,7 @@ public class MainActivity extends AppCompatActivity {
         // press CTRL + B -> to see DaggerCarComponent which is created at compile time
         CarComponent component = DaggerCarComponent.create();
 
-        // Accesses getCar() from the CarComponent interface
-        car = component.getCar();
+        component.inject(this);
         car.drive();
     }
 }
