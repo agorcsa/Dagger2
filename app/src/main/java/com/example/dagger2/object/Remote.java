@@ -1,6 +1,8 @@
-package com.example.dagger2;
+package com.example.dagger2.object;
 
 import android.util.Log;
+
+import com.example.dagger2.Car;
 
 import javax.inject.Inject;
 

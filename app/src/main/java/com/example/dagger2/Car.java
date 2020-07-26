@@ -2,13 +2,18 @@ package com.example.dagger2;
 
 import android.util.Log;
 
+import com.example.dagger2.object.Engine;
+import com.example.dagger2.object.Remote;
+import com.example.dagger2.object.Wheels;
+
 import javax.inject.Inject;
 
 public class Car {
 
     private static final String TAG = "Car";
 
-    @Inject Engine engine;
+    @Inject
+    Engine engine;
     private Wheels wheels;
 
     // constructor injection

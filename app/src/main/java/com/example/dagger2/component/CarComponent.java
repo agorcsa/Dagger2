@@ -1,8 +1,13 @@
-package com.example.dagger2;
+package com.example.dagger2.component;
+
+import com.example.dagger2.Car;
+import com.example.dagger2.MainActivity;
+import com.example.dagger2.module.WheelsModule;
 
 import dagger.Component;
 
-@Component
+// we add WheelsModule to our Car component
+@Component (modules = WheelsModule.class)
 public interface CarComponent {
 
     // getCar() provisional method

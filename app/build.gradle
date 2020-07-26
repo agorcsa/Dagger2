@@ -3,6 +3,7 @@ apply plugin: 'com.android.application'
 android {
     compileSdkVersion 29
     buildToolsVersion "29.0.3"
+    compileOptions.incremental = false
 
     defaultConfig {
         applicationId "com.example.dagger2"
